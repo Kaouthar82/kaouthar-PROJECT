@@ -8,7 +8,7 @@ pipeline {
                 checkout scmGit(
                     branches: [[name: '*/main']],
                     extensions: [],
-                    userRemoteConfigs: [[url: 'https://github.com/farahelbadaoui/phpProjet']]
+                    userRemoteConfigs: [[url: 'https://github.com/Kaouthar82/kaouthar-PROJECT']]
                 )
             }
         }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo "Building l'image docker..."
                 script {
-                    bat 'docker build -t farahfrh/projetdevops .'
+                    bat 'docker build -t kaouthar2/phpprojet .'
                 }
             }
         }
@@ -47,8 +47,8 @@ pipeline {
             steps {
                 echo "Push de l'image docker..."
                 script {
-                    bat "docker login -u farahfrh -p farah12345"
-                    bat 'docker push farahfrh/projetdevops'
+                    bat "docker login -u kaouthar2 -p kaouthar30112002"
+                    bat 'docker push kaouthar2/phpprojet'
                     }
             }
         }
