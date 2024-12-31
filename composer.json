@@ -1,0 +1,7 @@
+{
+    "name": "ahmed/php-jenkins-project",
+    "description": "A sample PHP project",
+    "require": {
+        "php": ">=8.2"
+    }
+}

@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APP_ENV=local
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      #MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE=registration
+      MYSQL_USER=root
+      MYSQL_PASSWORD=
